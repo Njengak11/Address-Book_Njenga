@@ -1,10 +1,10 @@
-#show-contact {
+#show-Contact {
   display: none;
 }
-.contact{
+.Contacts{
   cursor: pointer;
   color: #0008cc;
 }
-.contact:hover {
+.Contacts:hover {
   text-decoration: underline;
 }

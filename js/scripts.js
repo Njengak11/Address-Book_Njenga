@@ -4,30 +4,29 @@ function Contact(first, last) {
   this.lastName = last;
 }
 Contact.prototype.fullName= function() {
-  return this.firstName +" " + this.lastName;
+  return this.firstName + " " + this.lastName;
 }
 //user interface logic
 $(document).ready(function(){
-  $("form#new-contact").submit(function(event){
+  $("form#new-Contact").submit(function(event){
     event.preventDefault();
 
-  var inputtedFirstName =$("input#new-first-name").val();
+  var inputtedfirstName =$("input#new-first-name").val();
 
-  var inputtedLastName = $("input#new-first-name").val();
+  var inputtedlastName = $("input#new-last-name").val();
 
-  var newContact = new Contact( inputtedFirstName, inputtedLastName);
+  var newContact = new Contact( inputtedfirstName, inputtedlastName);
 
-     $("ul#contacts").append("<li><span class='contact'>" + newContact.fullName() + "</span></li>");
-      $(".contact").last().click(function() {
-        $("#show-contact").show();
-        $("#show-contact h2").text(newContact.firstName);
+     $("ul#Contacts").append("<li><span class='Contacts'>" + newContact.fullName() + "</span></li>");
+      $(".Contact").last().click(function() {
+        $("#show-Contact").show();
+        $("#show-Contact h2").text(newContact.fullName());
         $(".first-name").text(newContact.firstName);
         $(".last-name").text(newContact.lastName);
       });
 
       $("input#new-first-name").val("");
       $("input#new-last-name").val("");
-
-
+      
    });
 });
